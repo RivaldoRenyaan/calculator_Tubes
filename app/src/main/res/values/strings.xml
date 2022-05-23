@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">calculator</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="multiply">X</string>
+    <string name="divide">/</string>
+    <string name="clear_all">C</string>
+    <string name="equals">=</string>
+
+    <string name="nine">9</string>
+    <string name="eight">8</string>
+    <string name="seven">7</string>
+    <string name="six">6</string>
+    <string name="five">5</string>
+    <string name="four">4</string>
+    <string name="three">3</string>
+    <string name="two">2</string>
+    <string name="one">1</string>
+    <string name="zero">0</string>
+
+    <string name="tentang_aplikasi">Tentang Kalkulator</string>
+    <string name="tentang">
+        Kalkulator adalah alat untuk menghitung dari perhitungan sederhana seperti penjumlahan, pengurangan, perkalian dan pembagian sampai kepada kalkulator sains yang dapat menghitung rumus matematika tertentu.
+    </string>
+    <string name="riwayat_perhitungan">Riwayat perhitungan</string>
+    <string name="samadengan">=</string>
+    <string name="backspace">Backspace</string>
+    <string name="hapus_semua_data">Hapus semua data</string>
+
+    <string name="konfirmasi_hapus">Anda yakin ingin menghapus riwayat?</string>
+    <string name="hapus">Hapus</string>
+    <string name="batal">Batal</string>
+
+</resources>

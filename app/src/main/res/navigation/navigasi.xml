@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigasi"
+    app:startDestination="@id/kalkulasiFragment">
+
+    <fragment
+        android:id="@+id/kalkulasiFragment"
+        android:name="org.d3if2042.calculator.ui.kalkulasi.KalkulasiFragment"
+        android:label="Kalkulasi"
+        tools:layout="@layout/kalkulasi_fragment">
+        <action
+            android:id="@+id/action_kalkulasiFragment_to_tentangFragment"
+            app:destination="@id/tentangFragment" />
+        <action
+            android:id="@+id/action_kalkulasiFragment_to_historiFragment"
+            app:destination="@id/historiFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tentangFragment"
+        android:name="org.d3if2042.calculator.ui.TentangFragment"
+        android:label="Tentang"
+        tools:layout="@layout/tentang_fragment" />
+    <fragment
+        android:id="@+id/historiFragment"
+        android:name="org.d3if2042.calculator.ui.histori.HistoriFragment"
+        android:label="Histori"
+        tools:layout="@layout/fragment_histori" />
+</navigation>
