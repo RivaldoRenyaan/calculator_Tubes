@@ -2,7 +2,7 @@ package org.d3if2042.calculator.ui.kalkulasi
 
 import android.os.Bundle
 import android.view.*
-import android.widget.TextView
+//import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -37,7 +37,7 @@ class KalkulasiFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        viewModel.scheduleUpdater(requireActivity().application)
         getNumbersNOps()
     }
 

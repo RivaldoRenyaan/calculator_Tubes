@@ -1,12 +1,19 @@
 package org.d3if2042.calculator.ui.kalkulasi
 
+import android.app.Application
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import androidx.work.ExistingWorkPolicy
+import androidx.work.OneTimeWorkRequestBuilder
+import androidx.work.WorkManager
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import org.d3if2042.calculator.MainActivity
 import org.d3if2042.calculator.db.CalculationDao
 import org.d3if2042.calculator.db.CalculationEntity
+import org.d3if2042.calculator.network.UpdateWorker
+import java.util.concurrent.TimeUnit
 
 class KalkulasiViewModel(private val db: CalculationDao) : ViewModel() {
 
@@ -34,5 +41,16 @@ class KalkulasiViewModel(private val db: CalculationDao) : ViewModel() {
                 db.tambahData(calculation)
             }
         }
+    }
+
+    fun scheduleUpdater(app: Application) {
+        val request = OneTimeWorkRequestBuilder<UpdateWorker>()
+            .setInitialDelay(5, TimeUnit.SECONDS)
+            .build()
+        WorkManager.getInstance(app).enqueueUniqueWork(
+            MainActivity.CHANNEL_ID,
+            ExistingWorkPolicy.REPLACE,
+            request
+        )
     }
 }

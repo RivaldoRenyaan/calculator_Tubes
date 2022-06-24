@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/tentangFragment"
-        android:name="org.d3if2042.calculator.ui.TentangFragment"
+        android:name="org.d3if2042.calculator.ui.tentang.TentangFragment"
         android:label="Tentang"
         tools:layout="@layout/tentang_fragment" />
     <fragment
